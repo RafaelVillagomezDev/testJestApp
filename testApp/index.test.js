@@ -33,7 +33,6 @@ describe('Test Rooms and Bookings', () => {
     test('retorna todas las habitacion que hay en un intervalo de fechas. Retorna porcentaje y espera porcentaje', () => {
       const booking = new Booking({ ...copiaBooking })
       const room = new Room({ ...copiaRoom, bookings: booking })
-
       expect(
         totalOccupancyPercentage(
           room,
@@ -41,6 +40,5 @@ describe('Test Rooms and Bookings', () => {
           new Date('25 May 2022 14:48 UTC').toISOString(),
         ),
       ).toBe(100)
-    }),
-    test('Retorna todas las habitaciones que no estan ocupadas en ese rango', () => {})
+    })
 })
